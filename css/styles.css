@@ -61,6 +61,15 @@ main {
   padding-right: 10px;
 }
 
+span{
+  font-family: 'Poppins', sans-serif;
+}
+
+#clearRangeFilter{
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
 footer {
   background-color: #ebe3d0;
   text-align: center;

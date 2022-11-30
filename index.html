@@ -23,128 +23,40 @@
         <header id="header">
             <a href="#"><img src="./resources/logo-web.png" alt="Logo" id="logo-header" class="animate__animated animate__backInDown"></a>
             <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #403B33;">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav mx-auto">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Productos</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="cart.html">Carrito</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
               </nav>
         </header>
 
         <main>
-            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 g-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="comic-image text-center">
-                            <img src="./resources/el-castigador-maquina-de-guerra.jpg" alt="">
-                        </div>
-                        <div class="card-details">
-                            <h4><a href="#">El Castigador - Máquina de guerra</a></h4>
-                            <p>“Frank Castle: Máquina de Guerra”. En su guerra, El Castigador siempre ha estado limitado por el hecho de ser un único hombre. Pero ahora Frank tiene a su disposición las herramientas para hacer que su misión tenga carácter global. ¿Cómo va a negarse?</p>
-                            <div class="card-bottom-details d-flex justify-content-between">
-                                <div class="card-cost">$350</div>
-                                <div class="cart-button-card">
-                                    <a href="#"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="container d-flex d-flex justify-content-between flex-row">
+              <div class="row">
+                <div class="col text-right">
+                  <span>Ordenar alfabéticamente:</span>
+                  <button type="button" class="btn btn-dark"  id="sortAsc"><i class="fa-solid fa-arrow-up-wide-short"></i> Asc.</button>
+                  <button type="button" class="btn btn-dark"id="sortDesc"><i class="fa-solid fa-arrow-down-wide-short"></i> Desc.</button>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="comic-image text-center">
-                            <img src="./resources/spiderman-vs-morbius.jpg" alt="">
-                        </div>
-                        <div class="card-details">
-                            <h4><a href="#">Spiderman vs Morbius</a></h4>
-                            <p>Ante el salto a la gran pantalla de Morbius, te ofrecemos un volumen que recoge algunas de sus aventuras más destacadas, como antagonista de Spiderman. Desde su debut, en la legendaria saga de los brazos extra, hasta sus más recientes historias, pasando por la particular visión que de Michael Morbius diera Todd McFarlane.</p>
-                            <div class="card-bottom-details d-flex justify-content-between">
-                                <div class="card-cost">$350</div>
-                                <div class="cart-button-card">
-                                    <a href="#"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+
+              <div class="row">
+                <div class="col-3 text-right">
+                  <span>Filtrar por precio</span>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="comic-image text-center">
-                            <img src="./resources/thor-carnicero-de-dioses.jpg" alt="">
-                        </div>
-                        <div class="card-details">
-                            <h4><a href="#">Thor - El Carnicero de dioses</a></h4>
-                            <p>A lo largo de los siglos, los dioses han estado desapareciendo, lo que condena al caos a sus adoradores. Ahora, Thor sigue el rastro de sangre que amenaza con consumir su pasado, presente y futuro.</p>
-                            <div class="card-bottom-details d-flex justify-content-between">
-                                <div class="card-cost">$350</div>
-                                <div class="cart-button-card">
-                                    <a href="#"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-3">
+                  <input class="form-control" type="number" placeholder="min." id="rangeFilterCostMin">
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="comic-image text-center">
-                            <img src="./resources/caballero-luna-cuenta-atras-hacia-oscuridad.jpg" alt="">
-                        </div>
-                        <div class="card-details">
-                            <h4><a href="#">Caballero Luna - Cuenta atrás hacia la oscuridad</a></h4>
-                            <p>Mercenario, cazador de hombres lobo, millonario, taxista… ¿fantasma? Descubre al Caballero Luna desde su debut y hasta meterse de lleno en la más recordada de las épocas que viviera jamás, en que se convirtió en una referencia indiscutible del cómic estadounidense.</p>
-                            <div class="card-bottom-details d-flex justify-content-between">
-                                <div class="card-cost">$350</div>
-                                <div class="cart-button-card">
-                                    <a href="#"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-3">
+                  <input class="form-control" type="number" placeholder="máx." id="rangeFilterCostMax">
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="comic-image text-center">
-                            <img src="./resources/ms-marvel-fuera-de-lo-normal.jpg" alt="">
-                        </div>
-                        <div class="card-details">
-                            <h4><a href="#">Ms. Marvel - Fuera de lo normal</a></h4>
-                            <p>¡La edición completa de la obra maestra de Busiek y Ross! Un emocionante recorrido por los momentos que sirvieron para forjar el Universo Marvel bajo la visión única del fotógrafo Phil Sheldon. Desde los orígenes de los superhéroes a la trágica muerte de Gwen Stacy, de la llegada de Galactus a la Guerra Kree-Skrull, de la irrupción de los mutantes a la boda de Reed Richards y Sue Storm… ¡Los Prodigios están aquí!</p>
-                            <div class="card-bottom-details d-flex justify-content-between">
-                                <div class="card-cost">$350</div>
-                                <div class="cart-button-card">
-                                    <a href="#"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-3 p-0">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-secondary btn-block btn-sm" id="rangeFilterCost">Filtrar</button>
+                    <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+                  </div>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="comic-image text-center">
-                            <img src="./resources/daredevil-el-hombre-sin-miedo.jpg" alt="">
-                        </div>
-                        <div class="card-details">
-                            <h4><a href="#">Daredevil - El hombre sin miedo</a></h4>
-                            <p>¡El Hombre Sin Miedo consigue su primer Omnigold! Descubre las aventuras de Daredevil desde el principio, en un cuidado volumen que recoge los dos primeros años de su existencia, con la presentación de algunos de sus peores villanos.</p>
-                            <div class="card-bottom-details d-flex justify-content-between">
-                                <div class="card-cost">$350</div>
-                                <div class="cart-button-card">
-                                    <a href="#"><i class="fa fa-shopping-cart"></i> Añadir al carrito</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              
+              </div>
+
+            <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 g-4" id="prod-list-container">
               </div>
         </main>
         
@@ -161,6 +73,8 @@
             </div>
         </footer>
     </div>
+
+    <script src="products.js"></script>
 </body>
 
 </html>
